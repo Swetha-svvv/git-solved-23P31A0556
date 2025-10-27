@@ -1,65 +1,112 @@
-# Production Application Configuration
-application:
-  name: DevOpsSimulator
-  version: 1.0.0
-  environment: production
-
-server:
-  host: 0.0.0.0
-  port: 8080
-  ssl_enabled: true
-
-logging:
-  level: INFO
-  format: json
-  output: /var/log/app.log
-
-database:
-  host: prod-db.example.com
-  port: 5432
-  name: devops_prod
-
-features:
-  auto_scaling: true
-  load_balancer: enabled
-  backup_enabled: true
-
-
-# Development Application Configuration
-application:
-  name: DevOpsSimulator
-  version: 2.0.0-beta
-  environment: development
-
-server:
-  host: localhost
-  port: 3000
-  ssl_enabled: false
-  hot_reload: true
-
-logging:
-  level: DEBUG
-  format: pretty
-  output: console
-  show_stack_trace: true
-
-database:
-  host: localhost
-  port: 5432
-  name: devops_dev
-
-features:
-  auto_scaling: false
-  load_balancer: disabled
-  backup_enabled: false
-  experimental_features: true
+production:
+  application:
+    name: DevOpsSimulator
+    version: 1.0.0
+    environment: production
+  
+  server:
+    host: 0.0.0.0
+    port: 8080
+    ssl_enabled: true
+  
+  logging:
+    level: INFO
+    format: json
+    output: /var/log/app.log
+  
+  database:
+    host: prod-db.example.com
+    port: 5432
+    name: devops_prod
+  
+  features:
+    auto_scaling: true
+    load_balancer: enabled
+    backup_enabled: true
 
 development:
-  mock_external_apis: true
-  debug_mode: true
-  cors_enabled: true
+  application:
+    name: DevOpsSimulator
+    version: 2.0.0-beta
+    environment: development
+  
+  server:
+    host: localhost
+    port: 3000
+    ssl_enabled: false
+    hot_reload: true
+  
+  logging:
+    level: DEBUG
+    format: pretty
+    output: console
+    show_stack_trace: true
+  
+  database:
+    host: localhost
+    port: 5432
+    name: devops_dev
+  
+  features:
+    auto_scaling: false
+    load_balancer: disabled
+    backup_enabled: false
+    experimental_features: true
+  
+  development:
+    mock_external_apis: true
+    debug_mode: true
+    cors_enabled: true
+  
+  notifications:
+    slack_webhook: "https://hooks.slack.com/services/XXX"
+    discord_webhook: "https://discord.com/api/webhooks/YYY"
+    email_alerts: false
 
-notifications:
-  slack_webhook: "https://hooks.slack.com/services/XXX"
-  discord_webhook: "https://discord.com/api/webhooks/YYY"
-  email_alerts: false
+experimental:
+  application:
+    name: DevOpsSimulator
+    version: 3.0.0-experimental
+    environment: testing
+    experimental_mode: true
+  
+  server:
+    host: 0.0.0.0
+    port: 9000
+    ssl_enabled: true
+    multi_port: [9000, 9001, 9002]
+  
+  logging:
+    level: TRACE
+    format: structured
+    output: /var/log/experimental.log
+    ai_analysis: enabled
+  
+  database:
+    host: cluster.example.com
+    port: 5432
+    name: devops_experimental
+    distributed: true
+  
+  features:
+    auto_scaling: advanced
+    load_balancer: ai-optimized
+    backup_enabled: true
+    chaos_engineering: enabled
+  
+  ai_features:
+    predictive_scaling: true
+    anomaly_detection: true
+    auto_optimization: true
+    model_version: "v2.1.0"
+  
+  cloud_providers:
+    - aws
+    - azure
+    - gcp
+    - digitalocean
+  
+  security:
+    zero_trust: enabled
+    encryption: AES-256
+    audit_logging: comprehensive

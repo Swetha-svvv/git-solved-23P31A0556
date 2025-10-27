@@ -1,7 +1,7 @@
 # System Architecture
 
 ## Overview
-DevOps Simulator follows a *microservices architecture* designed for high availability, scalability, and flexibility across both production and development environments.
+DevOps Simulator follows a *microservices architecture* designed for high availability, scalability, and flexibility across multiple environments — including stable production, active development, and experimental AI-enhanced testing builds.
 
 ---
 
@@ -89,4 +89,57 @@ DevOps Simulator follows a *microservices architecture* designed for high availa
 ⚠ Warning – these are unstable:  
 - Multi-cloud deployment  
 - AI-powered log analysis  
-- Automatic rollback on anomaly detection
+- Automatic rollback on anomaly detection  
+
+---
+
+### 🧬 Experimental (AI-Enhanced Build)
+- *Purpose:* Cutting-edge, event-driven architecture for R&D testing  
+- *Version:* 3.0.0-experimental  
+- *Deployment:* Multi-cloud with Kubernetes and custom AI orchestration  
+
+#### Components
+*1. Application Server (AI-Enhanced)*
+- Technology: Node.js + Express + TensorFlow.js  
+- Ports: 9000 (main), 9001 (metrics), 9002 (AI API)  
+- Scaling: Predictive auto-scaling  
+- Intelligence: Real-time ML inference  
+- Messaging: Apache Kafka event streaming  
+
+*2. Distributed Database Layer*
+- PostgreSQL 14 cluster (5 nodes)  
+- Redis cache with ML optimization  
+- Multi-master replication  
+- Continuous geo-redundant backups  
+
+*3. AI/ML Pipeline*
+- Frameworks: TensorFlow, PyTorch, Scikit-learn  
+- Models: LSTM (anomaly detection), XGBoost (load prediction), RL (scaling optimizer)  
+- Training: Continuous online learning  
+- Inference latency: <50ms  
+
+*4. Multi-Cloud Orchestration*
+- Clouds: AWS, Azure, GCP, DigitalOcean  
+- Load balancing: GeoDNS + anycast  
+- Failover: Automatic cross-cloud recovery  
+
+*5. Advanced Monitoring*
+- Metrics: Prometheus + Thanos  
+- Logs: ELK + AI anomaly analysis  
+
+---
+
+## Summary
+
+| Environment | Version | Key Traits | Deployment | Auto-scaling |
+|--------------|----------|-------------|-------------|---------------|
+| Production | 1.0.0 | Stable, secure | Kubernetes | ✅ |
+| Development | 2.0.0-beta | Local testing, hot reload | Docker Compose | ⚙ Manual |
+| Experimental | 3.0.0-experimental | AI-driven, multi-cloud | Kubernetes + AI | 🤖 Predictive |
+
+---
+
+## Security Overview
+- *Production:* Strict SSL, audit logging  
+- *Development:* Relaxed policies for local testing  
+- *Experimental:* Zero-trust architecture + encryption + audit AI

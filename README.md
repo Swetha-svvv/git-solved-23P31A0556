@@ -1,10 +1,10 @@
 # DevOps Simulator
 
-A comprehensive CI/CD configuration management tool for enterprise deployments.
+A comprehensive *CI/CD configuration management tool* for enterprise deployments.
 
 ---
 
-## Project Status
+## 🧭 Project Status
 
 | Environment | Version | Maintainer  |
 |--------------|----------|-------------|
@@ -13,7 +13,7 @@ A comprehensive CI/CD configuration management tool for enterprise deployments.
 
 ---
 
-## Key Features
+## 🚀 Key Features
 
 ### Core (All Environments)
 - Automated deployment scripts  
@@ -21,7 +21,9 @@ A comprehensive CI/CD configuration management tool for enterprise deployments.
 - Configuration management  
 - Backup and recovery system  
 
-### Development Enhancements (v2.0.0-beta)
+---
+
+### 🧩 Development Enhancements (v2.0.0-beta)
 - 🚀 Kubernetes orchestration support  
 - 🔄 Advanced blue-green deployment  
 - 📊 Enhanced monitoring dashboard  
@@ -32,13 +34,15 @@ A comprehensive CI/CD configuration management tool for enterprise deployments.
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
 ### 🟢 Production Setup
 1. Clone the repository  
 2. Configure environment variables  
 3. Run deployment script  
 4. Monitor system health  
+
+---
 
 ### 🧪 Development Setup
 ```bash
