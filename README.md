@@ -53,4 +53,4 @@ npm install
 npm test
 
 # Start development server
-npm run dev
+npm run dev## FAQ
